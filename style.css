@@ -94,9 +94,34 @@ body {
   margin-left: 2rem;
   font-size: 1.4rem;
   opacity: 0;
+  transition: all 0.3s;
 }
 
 .main {
   background-image: url(images/hero-desktop.jpg);
-  min-height: 100vh;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main {
+    height: 50vh;
+    background-image: url(images/hero-mobile.jpg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 4rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 56.25%;
+  }
 }
